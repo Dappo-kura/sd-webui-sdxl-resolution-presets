@@ -4,7 +4,6 @@ onUiLoaded(function () {
     const presetsHorizontal = [
         { label: "12:5", width: 1536, height: 640, ratioClass: "ratio-12-5" },
         { label: "7:4", width: 1344, height: 768, ratioClass: "ratio-7-4" },
-        { label: "16:9", width: 1344, height: 768, ratioClass: "ratio-16-9" },
         { label: "3:2", width: 1216, height: 832, ratioClass: "ratio-3-2" },
         { label: "5:4", width: 1152, height: 896, ratioClass: "ratio-5-4" },
     ];
@@ -16,7 +15,6 @@ onUiLoaded(function () {
     const presetsVertical = [
         { label: "4:5", width: 896, height: 1152, ratioClass: "ratio-4-5" },
         { label: "2:3", width: 832, height: 1216, ratioClass: "ratio-2-3" },
-        { label: "9:16", width: 768, height: 1344, ratioClass: "ratio-9-16" },
         { label: "4:7", width: 768, height: 1344, ratioClass: "ratio-4-7" },
         { label: "5:12", width: 640, height: 1536, ratioClass: "ratio-5-12" },
     ];
