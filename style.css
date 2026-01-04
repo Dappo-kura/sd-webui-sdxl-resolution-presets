@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 0px; /* Reduced margin */
+    margin-bottom: 0px;
     align-items: flex-end;
-    padding: 4px 10px; 
+    padding: 4px 10px;
 }
 
 .sdxl-res-button {
@@ -13,24 +13,79 @@
     cursor: pointer;
     transition: all 0.2s;
     border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
+    /* Basic size fallback */
+    min-width: 20px;
+    min-height: 20px;
 }
 
 .sdxl-res-button:hover {
     background-color: var(--button-secondary-background-fill-hover, #4b5563);
-    border-color: var(--primary-500, #EF4444); /* Reddish accent like in capture? or just standard */
+    border-color: var(--primary-500, #EF4444);
+}
+
+.sdxl-res-separator {
+    width: 1px;
+    height: 40px;
+    /* Approximate max height of buttons */
+    background-color: var(--border-color-primary, #374151);
+    margin: 0 8px;
+    align-self: center;
 }
 
 /* Aspect Ratio Simulations */
-.ratio-1-1 { width: 40px; height: 40px; }
-.ratio-5-4 { width: 45px; height: 36px; }
-.ratio-4-5 { width: 36px; height: 45px; }
-.ratio-3-2 { width: 48px; height: 32px; }
-.ratio-2-3 { width: 32px; height: 48px; }
-.ratio-7-4 { width: 56px; height: 32px; }
-.ratio-4-7 { width: 32px; height: 56px; }
-.ratio-12-5 { width: 60px; height: 25px; }
-.ratio-5-12 { width: 25px; height: 60px; }
-.ratio-16-9 { width: 58px; height: 33px; }
-.ratio-9-16 { width: 33px; height: 58px; }
+.ratio-1-1 {
+    width: 40px;
+    height: 40px;
+}
+
+.ratio-5-4 {
+    width: 45px;
+    height: 36px;
+}
+
+.ratio-4-5 {
+    width: 36px;
+    height: 45px;
+}
+
+.ratio-3-2 {
+    width: 48px;
+    height: 32px;
+}
+
+.ratio-2-3 {
+    width: 32px;
+    height: 48px;
+}
+
+.ratio-7-4 {
+    width: 56px;
+    height: 32px;
+}
+
+.ratio-4-7 {
+    width: 32px;
+    height: 56px;
+}
+
+.ratio-12-5 {
+    width: 60px;
+    height: 25px;
+}
+
+.ratio-5-12 {
+    width: 25px;
+    height: 60px;
+}
+
+.ratio-16-9 {
+    width: 58px;
+    height: 33px;
+}
+
+.ratio-9-16 {
+    width: 33px;
+    height: 58px;
+}
