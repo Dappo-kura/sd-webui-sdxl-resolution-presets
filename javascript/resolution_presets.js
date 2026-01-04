@@ -1,5 +1,6 @@
 onUiLoaded(function () {
     // Defines resolution presets for SDXL, grouped
+    // Sorted loosely by width
     const presetsHorizontal = [
         { label: "12:5", width: 1536, height: 640, ratioClass: "ratio-12-5" },
         { label: "7:4", width: 1344, height: 768, ratioClass: "ratio-7-4" },
@@ -30,17 +31,23 @@ onUiLoaded(function () {
         const btn = document.createElement('div');
         btn.className = `sdxl-res-button ${p.ratioClass}`;
         btn.title = `${p.width} x ${p.height} (${p.label})`;
+        btn.dataset.width = p.width;
+        btn.dataset.height = p.height;
+
         btn.onclick = function () {
-            const tabName = container.id.split('_')[0]; // Extract tabName from container id
+            const tabName = container.id.split('_')[0];
             const wInput = gradioApp().querySelector(`#${tabName}_width input[type='number']`);
             const hInput = gradioApp().querySelector(`#${tabName}_height input[type='number']`);
 
             if (wInput && hInput) {
                 wInput.value = p.width;
                 hInput.value = p.height;
-
                 updateInput(wInput);
                 updateInput(hInput);
+
+                // Visual selection update
+                container.querySelectorAll('.sdxl-res-button').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
             }
         };
         container.appendChild(btn);
@@ -50,6 +57,13 @@ onUiLoaded(function () {
         const sep = document.createElement('div');
         sep.className = 'sdxl-res-separator';
         container.appendChild(sep);
+    }
+
+    function createLabel(container) {
+        const lbl = document.createElement('span');
+        lbl.className = 'sdxl-res-label';
+        lbl.innerText = 'resolution SDXL :';
+        container.appendChild(lbl);
     }
 
     function createResolutionButtons(tabName) {
@@ -66,16 +80,14 @@ onUiLoaded(function () {
         container.id = containerId;
         container.className = 'sdxl-res-presets-container';
 
+        createLabel(container);
+
         // Add Horizontal
         presetsHorizontal.forEach(p => createButton(container, p));
-
-        // Separator
         createSeparator(container);
 
         // Add Square
         presetsSquare.forEach(p => createButton(container, p));
-
-        // Separator
         createSeparator(container);
 
         // Add Vertical

@@ -1,91 +1,112 @@
 .sdxl-res-presets-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    /* reduced gap */
     margin-bottom: 0px;
-    align-items: flex-end;
-    padding: 4px 10px;
+    align-items: center;
+    /* center vertically with text */
+    padding: 0px 10px 10px 12px;
+}
+
+.sdxl-res-label {
+    margin-right: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--body-text-color, #e5e7eb);
 }
 
 .sdxl-res-button {
-    background-color: var(--button-secondary-background-fill, #1f2937);
-    border: 1px solid var(--button-secondary-border-color, #374151);
+    background-color: var(--neutral-700, #374151);
+    /* Dark grey fill */
+    border: none;
+    /* No border for cleaner look */
     cursor: pointer;
     transition: all 0.2s;
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    /* sharper corners */
     box-sizing: border-box;
-    /* Basic size fallback */
-    min-width: 20px;
-    min-height: 20px;
+    opacity: 0.6;
 }
 
 .sdxl-res-button:hover {
-    background-color: var(--button-secondary-background-fill-hover, #4b5563);
-    border-color: var(--primary-500, #EF4444);
+    opacity: 1.0;
+    background-color: var(--neutral-500, #9ca3af);
 }
 
+.sdxl-res-button.active {
+    background-color: var(--primary-100, #ffffff);
+    /* Bright white/cyan for active */
+    opacity: 1.0;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Spacer/Separator - made invisible or subtle gap */
 .sdxl-res-separator {
-    width: 1px;
-    height: 40px;
-    /* Approximate max height of buttons */
-    background-color: var(--border-color-primary, #374151);
-    margin: 0 8px;
-    align-self: center;
+    width: 8px;
+    /* just space */
+    height: 1px;
+    display: block;
 }
 
-/* Aspect Ratio Simulations */
+/* Aspect Ratio Simulations - Much smaller and flatter */
+/* Base height = 12px */
+
+/* 1:1 */
 .ratio-1-1 {
-    width: 40px;
-    height: 40px;
+    width: 14px;
+    height: 14px;
 }
 
+/* Horizontal */
 .ratio-5-4 {
-    width: 45px;
-    height: 36px;
-}
-
-.ratio-4-5 {
-    width: 36px;
-    height: 45px;
+    width: 16px;
+    height: 13px;
 }
 
 .ratio-3-2 {
-    width: 48px;
-    height: 32px;
-}
-
-.ratio-2-3 {
-    width: 32px;
-    height: 48px;
+    width: 18px;
+    height: 12px;
 }
 
 .ratio-7-4 {
-    width: 56px;
-    height: 32px;
-}
-
-.ratio-4-7 {
-    width: 32px;
-    height: 56px;
+    width: 22px;
+    height: 12px;
 }
 
 .ratio-12-5 {
-    width: 60px;
-    height: 25px;
-}
-
-.ratio-5-12 {
-    width: 25px;
-    height: 60px;
+    width: 24px;
+    height: 10px;
 }
 
 .ratio-16-9 {
-    width: 58px;
-    height: 33px;
+    width: 22px;
+    height: 12px;
+}
+
+
+/* Vertical */
+.ratio-4-5 {
+    width: 13px;
+    height: 16px;
+}
+
+.ratio-2-3 {
+    width: 12px;
+    height: 18px;
+}
+
+.ratio-4-7 {
+    width: 12px;
+    height: 22px;
+}
+
+.ratio-5-12 {
+    width: 10px;
+    height: 24px;
 }
 
 .ratio-9-16 {
-    width: 33px;
-    height: 58px;
+    width: 12px;
+    height: 22px;
 }
