@@ -18,13 +18,11 @@
 
 .sdxl-res-button {
     background-color: var(--neutral-700, #374151);
-    /* Dark grey fill */
     border: none;
-    /* No border for cleaner look */
     cursor: pointer;
     transition: all 0.2s;
-    border-radius: 2px;
-    /* sharper corners */
+    border-radius: 0px;
+    /* 直角 */
     box-sizing: border-box;
     opacity: 0.6;
 }
@@ -35,10 +33,11 @@
 }
 
 .sdxl-res-button.active {
-    background-color: var(--primary-100, #ffffff);
-    /* Bright white/cyan for active */
+    background-color: #ffffff;
+    /* 白色 */
+    border: 2px solid #00CED1;
+    /* 青緑色の枠 */
     opacity: 1.0;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 /* Spacer/Separator - made invisible or subtle gap */
