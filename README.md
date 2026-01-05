@@ -2,7 +2,7 @@
 
 Stable Diffusion WebUI (A1111) 用の拡張機能です。
 SDXLに最適な解像度（アスペクト比）への切り替えボタンを、`txt2img` および `img2img` タブのスライダー上部に追加します。
-
+<img width="940" height="457" alt="capture_sd-webui-sdxl-resolution-presets" src="https://github.com/user-attachments/assets/85334061-27b9-4136-9ec4-0e4bbc576891" />
 ## 機能
 - ワンクリックでSDXL推奨アスペクト比に解像度を設定
 - ボタン形状でアスペクト比を視覚的に表現（横長、縦長、正方形など）
